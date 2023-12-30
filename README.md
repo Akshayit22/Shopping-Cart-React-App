@@ -1,8 +1,16 @@
-# React + Vite
+# Shopping Cart React App
+#### Users can see products and add/remove from cart and see the summry
+## Tech stack
+### React
+### Redux
+### Tailwind css
+### Fake store api
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Image : 
+<img src='./Pics/Screenshot (392).png'/> 
 
-Currently, two official plugins are available:
+<img src='./Pics/Screenshot (394).png'/> 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src='./Pics/Screenshot (396).png'/> 
+
+<img src='./Pics/Screenshot (397).png'/> 
