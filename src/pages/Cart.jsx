@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItem from "../Components/CartItem";
 import { useEffect, useState } from "react";
-
+import Navbar from '../Components/Navbar';
 const Cart = () =>{
 
     const {cart} = useSelector((state)=>state);
@@ -14,6 +14,9 @@ const Cart = () =>{
 
     return(
         <div>
+            <div className="bg-slate-900">
+                <Navbar></Navbar>
+            </div>
             {
                 cart.length > 0 ? 
                 (
@@ -43,9 +46,9 @@ const Cart = () =>{
 
 
 
-                            <div className="flex flex-col fixed bottom-4 ml-[40px]">
+                            <div className="flex flex-col items-center ml-[40px] mb-10">
                                 <p className="text-xl font-bold"><span className="text-gray-700 font-semibold">Total Amount is : ${totalAmount} </span></p>
-                                <button className="bg-green-700 hover:bg-purple-50 rounded-lg text-white transition duration-300 ease-linear mt-5 border-2 border-green-600 font-bold hover:text-green-700 p-3 text-xl">
+                                <button className="bg-green-700 hover:bg-purple-50 rounded-lg text-white transition duration-300 ease-linear mt-5 border-2 border-green-600 font-bold hover:text-green-700 p-3 text-xl w-[80%]">
                                     Check Out</button>
                             </div>
 
@@ -57,7 +60,7 @@ const Cart = () =>{
                 ) :
                 (
                     <div className="min-h-[80vh] flex flex-col items-center justify-center">
-                        <h1 className="text-gray-700 font-semibold text-xl mb-2">Your Cart is Empty !</h1>
+                        <h1 className="text-slate-900 font-semibold text-xl mb-2">Your Cart is Empty !</h1>
                         <Link to="/">
                             <button className="uppercase bg-green-600 hover:bg-purple-50 rounded-lg text-white transition duration-300 ease-linear mt-5 border-2 border-green-600 font-semibold hover:text-green-700 p-3 px-10 tracking-wider">
                                 Shop Now</button>
