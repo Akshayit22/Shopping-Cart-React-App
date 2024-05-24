@@ -8,7 +8,9 @@
 ### Fake store api
 
 ## Image : 
-<img src='./Pics/Screenshot (392).png'/> 
+<img src='./Pics/Screenshot (466).png'/> 
+
+<img src='./Pics/Screenshot (467).png'/> 
 
 <img src='./Pics/Screenshot (394).png'/> 
 
