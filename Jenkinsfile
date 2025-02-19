@@ -11,14 +11,24 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: "${BRANCH_NAME}", url: "${GIT_REPO}"
+                deleteDir() // Clean the workspace before cloning
+                checkout scmGit(branches: [[name: '*/main']], 
+                    userRemoteConfigs: [[url: "${GIT_REPO}"]])
+            }
+        }
+
+        stage('Verify Files') {
+            steps {
+                sh 'ls -la'
+                sh 'cat package.json'
             }
         }
 
         stage('Build React App') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                sh 'echo building'
+                // sh 'npm install'
+                // sh 'npm run build'
             }
         }
 
