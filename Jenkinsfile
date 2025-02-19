@@ -5,14 +5,14 @@ pipeline {
         DOCKER_IMAGE = 'akshaytelang395/webapp-jenkins-build:latest'
         DOCKER_CREDENTIALS = 'docker-hub-credentials'  // Jenkins Credentials ID
         GIT_REPO = 'https://github.com/Akshayit22/Shopping-Cart-React-App.git'
-        BRANCH_NAME = 'main'
+        BRANCH_NAME = 'master'
     }
 
     stages {
         stage('Clone Repository') {
             steps {
                 deleteDir() // Clean the workspace before cloning
-                checkout scmGit(branches: [[name: '*/main']], 
+                checkout scmGit(branches: [[name: '*/master']], 
                     userRemoteConfigs: [[url: "${GIT_REPO}"]])
             }
         }
