@@ -11,15 +11,8 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                checkout scmGit(branches: [[name: '*/${BRANCH_NAME}']], 
-                    userRemoteConfigs: [[url: "${GIT_REPO}"]])
-            }
-        }
-
-        stage('Verify Files') {
-            steps {
-                sh 'ls -la'
-                sh 'cat package.json'
+                checkout scm
+                sh "echo current branch is : ${BRANCH_NAME}"
             }
         }
 
