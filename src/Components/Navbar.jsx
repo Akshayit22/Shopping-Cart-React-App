@@ -26,7 +26,7 @@ const Navbar = ({setSearchFilter}) => {
 
                 
                 <form className=" mx-auto max-w-xl py-1 px-6 rounded-full bg-gray-50 border flex focus-within:border-gray-300" onSubmit={formSubmit}>
-                    <input type="text" placeholder="Search items" onChange={(e)=> setSearch(e.target.value)}
+                    <input type="text" placeholder="Search items here" onChange={(e)=> setSearch(e.target.value)}
                         className="bg-transparent w-full focus:outline-none pr-4 font-semibold border-0 focus:ring-0 px-0 py-0" name="search"></input>
                         <button type="submit" className="flex flex-row items-center justify-center min-w-[30px] px-4 rounded-full font-medium tracking-wide border disabled:cursor-not-allowed disabled:opacity-50 transition ease-in-out duration-150 text-base bg-slate-900 text-white font-medium tracking-wide border-transparent py-1.5 h-[35px] -mr-3" >
                         <FaSearch/>

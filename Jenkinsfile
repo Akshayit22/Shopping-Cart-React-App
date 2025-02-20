@@ -11,8 +11,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                deleteDir() // Clean the workspace before cloning
-                checkout scmGit(branches: [[name: '*/master']], 
+                checkout scmGit(branches: [[name: '*/${BRANCH_NAME}']], 
                     userRemoteConfigs: [[url: "${GIT_REPO}"]])
             }
         }
