@@ -24,7 +24,7 @@ jobs:
       - name: Run Docker Container
         run: |
           echo "Running Docker Container..."
-          docker rm webapp-container
+          docker ps -a -q --filter "name=webapp-container" | grep -q . && docker stop webapp-container && docker rm webapp-container || echo "No existing container to remove"
           docker run -d -p 80:80 --name webapp-container webapp-build:latest
 
       - name: Verify Running Container
