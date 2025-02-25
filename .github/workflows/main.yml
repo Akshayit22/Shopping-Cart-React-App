@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-run:
-    runs-on: self-hosted # Ensure your self-hosted runner is configured
+    runs-on: self-hosted
 
     steps:
       - name: Checkout Repository
@@ -24,7 +24,8 @@ jobs:
       - name: Run Docker Container
         run: |
           echo "Running Docker Container..."
-          docker run -d -p 3000:80 --name webapp-container webapp-build:latest
+          docker rm webapp-container
+          docker run -d -p 80:80 --name webapp-container webapp-build:latest
 
       - name: Verify Running Container
         run: |
